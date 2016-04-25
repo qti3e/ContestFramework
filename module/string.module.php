@@ -39,12 +39,12 @@ function every_filter($filter, $string)
  */
 function alphabet($string)
 {
-    return $this->every_filter("([a-zA-Z])", $string);
+    return every_filter("([a-zA-Z])", $string);
 }
 
 function _alphabet($string)
 {
-    return !$this->alphabet($string);
+    return !alphabet($string);
 }
 
 /**
@@ -53,12 +53,12 @@ function _alphabet($string)
  */
 function sAlphabet($string)
 {
-    return $this->every_filter("([a-z])", $string);
+    return every_filter("([a-z])", $string);
 }
 
 function _sAlphabet($string)
 {
-    return !$this->sAlphabet($string);
+    return !sAlphabet($string);
 }
 
 /**
@@ -67,12 +67,12 @@ function _sAlphabet($string)
  */
 function bAlphabet($string)
 {
-    return $this->every_filter("([A-Z])", $string);
+    return every_filter("([A-Z])", $string);
 }
 
 function _bAlphabet($string)
 {
-    return !$this->bAlphabet($string);
+    return !bAlphabet($string);
 }
 
 /**
@@ -81,12 +81,12 @@ function _bAlphabet($string)
  */
 function number($string)
 {
-    return $this->every_filter('/\d/', $string);
+    return every_filter('/\d/', $string);
 }
 
 function _number($string)
 {
-    return !$this->number($string);
+    return !number($string);
 }
 
 /**
@@ -95,12 +95,12 @@ function _number($string)
  */
 function other($string)
 {
-    return $this->every_filter('/\W/', $string);
+    return every_filter('/\W/', $string);
 }
 
 function _other($string)
 {
-    return !$this->other($string);
+    return !other($string);
 }
 
 /**
@@ -129,7 +129,7 @@ function unique($string)
  */
 function _unique($string)
 {
-    return !$this->unique($string);
+    return !unique($string);
 }
 
 /**
