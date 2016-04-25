@@ -41,7 +41,7 @@ function GCD($a, $b)
  */
 function LCM($m, $n)
 {
-    return ($m * $n) / $this->GCD($m, $n);
+    return ($m * $n) / GCD($m, $n);
 }
 
 /**
@@ -59,15 +59,15 @@ function C($n, $k)
         $toMul = $n - $k + $i;
         $toDiv = $i;
 
-        $g = $this->GCD($toMul, $toDiv);
+        $g = GCD($toMul, $toDiv);
         $toMul /= $g;
         $toDiv /= $g;
 
-        $g = $this->GCD($numerator, $toDiv);
+        $g = GCD($numerator, $toDiv);
         $numerator /= $g;
         $toDiv /= $g;
 
-        $g = $this->GCD($toMul, $denominator);
+        $g = GCD($toMul, $denominator);
         $toMul /= $g;
         $toDiv /= $g;
 
@@ -96,9 +96,9 @@ function fastexp($base, $power)
     if ($power == 0) {
         return 1;
     } elseif ($power % 2 == 0) {
-        return $this->square($this->fastexp($base, $power / 2));
+        return square(fastexp($base, $power / 2));
     } else {
-        return $base * ($this->fastexp($base, $power - 1));
+        return $base * (fastexp($base, $power - 1));
     }
 }
 
@@ -156,14 +156,14 @@ function is_prime($a)
  */
 function Carmicheal($n)
 {
-    if ($this->is_prime($n)) {
+    if (is_prime($n)) {
         return false;
     }
     $p = 0;
     $l = 1;
     for ($i = 1; $i <= $n; $i++) {
         if ($n % $i == 0) {
-            if ($this->is_prime($i)) {
+            if (is_prime($i)) {
                 if ($l * $i <= $n) {
                     $l *= $i;
                     $p++;
