@@ -16,7 +16,7 @@ Class q2 extends \contest\contest {
 }
 ?>
   ```
-  And are you ready to read it by yourself without this framework?
+  And are you ready to write it by yourself,but without this framework?
   ```
 Function is_prime ($a) {
 	If ($a == 1) return false;
