@@ -4,7 +4,8 @@
 ##Who?
   All of PHP programmers that want to participate in programming contests
 ##Why?
-  It has an extra power in making your code shorter and with no wrong, look at this simple code that read judge system's input line by line and prints each number that is prime:
+  It has an extra power to make your codes shorter and with no wrong.
+  For example look at this simple code that read judge system's input line by line and prints each number that is prime:
   ```
 <?PHP
 Class q2 extends \contest\contest {
