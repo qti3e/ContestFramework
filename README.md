@@ -6,7 +6,7 @@
 ##Why?
   It has an extra power to make your codes shorter and with no wrong.
   For example look at this simple code that read judge system's input line by line and prints each number that is prime:
-  ```
+  ```php
 <?PHP
 Class q2 extends \contest\contest {
     Public function index () {
@@ -18,7 +18,8 @@ Class q2 extends \contest\contest {
 ?>
   ```
   And are you ready to write it by yourself,but without this framework?
-  ```
+  ```php
+<?php
 Function is_prime ($a) {
 	If ($a == 1) return false;
 	If ($a == 2) return true;
