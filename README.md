@@ -1,8 +1,4 @@
-# ContestFramework
-##What?
-  A PHP framework to help you to participate in programming contests.
-##Who?
-  All of PHP programmers that want to participate in programming contests
+# Contest Framework
 ##Why?
   It has an extra power to make your codes shorter and with no wrong.
   For example look at this simple code that read judge system's input line by line and prints each number that is prime:
@@ -38,3 +34,7 @@ While (fscanf (STDIN, '%d', $number1) === 1) {
 	}
 }
 ```
+##Who?
+  All of PHP programmers that want to participate in programming contests
+##What?
+  A PHP framework to help you to participate in programming contests.
